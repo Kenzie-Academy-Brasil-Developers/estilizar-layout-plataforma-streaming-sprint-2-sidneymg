@@ -13,26 +13,109 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** RODAPÉ
 **** PÁGINA INICIAL
 */
-
+body, header, section,footer,div,figure,figcaption,img,h1,h2,h3,button,ul,li{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
 /* VARIÁVEIS */
 :root{
   
 }
-
+figcaption {
+	visibility: hidden;
+}
 /*BODY*/
 	body{
-
+		font-family: 'Helvetica Neue','Helvetica,Arial',Arial,sans-serif;
+		background-color: #00002e;
+		color: antiquewhite;
 	}
 
 /*TOPO*/
 	header.topo{
-		
+		display: flex;
+		justify-content: center;
+	}
+	.topo img{
+		width: 170px;
 	}
 
 /*RODAPÉ*/
-	
+	footer button{
+		background-color: rgba(0, 0, 0, 0);
+		color: azure;
+		margin-top: 20px;
+		padding: 10px;
+		border-radius: 3px;
+		border: 1px solid rgba(255, 255, 255, 0.582)
+	}
+	footer button:hover{
+		background-color: black;
+	}
+	footer button:active{
+		margin-top: 25px;		
+	}
+
+
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
+	.pg-home{
+		display: flex;
+		justify-content: center;
+	}
+	div.pg-home section{
+		text-align: center;
+		display: flex;
+		width: 500px;
+		flex-direction: column;
+	}
+	.pg-home section img{
+		margin: 25px;
+		width: 150px;
+	}
+	section .addPerfil img{
+		padding: 25px 0;
+		width: 100px;
+	}
+	.pg-home section img:hover{
+		border: 2px solid white;
+	}
+	section header h2{
+		font-size: 40px;
+		padding: 25px 0;
+	}
+	.pg-home section ul{
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.pg-home section ul li{
+		width: 186px;
+		text-align: center;
+	}
+	.pg-home section ul li h3{
+		font-weight: normal;
+		opacity: 70%;
+	}
+	.pg-home section ul li h3:hover{
+		opacity: 100%;
+	}
+	
+	@media only screen and (min-width: 768px) {
+		header.topo{
+			justify-content: left;
+		}
+		section header h2{
+			font-size: 45px;
+		}
+		
+		.pg-home section ul{
+			flex-wrap: nowrap;
+		}
+		div.pg-home section{
+			max-width: 858px;
+		}
 		
 	}
